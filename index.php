@@ -38,7 +38,7 @@ try{
     print_r("500");
 }
 
-$fp = fopen("Command.log","wb");
+$fp = fopen("Command.log","a+");
 fwrite($fp,"<hr/>");
 fwrite($fp,Input::$command);
 fclose($fp);
