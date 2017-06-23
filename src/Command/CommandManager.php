@@ -30,12 +30,12 @@ class CommandManager
         return CommandManager::getInstance()->getCheckedList();
     }
 
-    public static function executeCommand(string $command,array $args = []) : string
+    public static function getExecuter(string $command) : string
     {
-        return CommandManager::getInstance()->_executeCommand($command, $args);
+        return CommandManager::getInstance()->_getExecuter($command);
     }
 
-    private function _executeCommand(string $command,array $args = []) : string {
+    private function _getExecuter(string $command) : string {
         try {
             $list = $this->getCheckedList();
 
@@ -49,7 +49,7 @@ class CommandManager
             return 'Twpf\Command\CommandManager:50';
         }
 
-        return $CommandInstanse($args);
+        return $CommandInstanse;
     }
 
     private function getCheckedList() : array
