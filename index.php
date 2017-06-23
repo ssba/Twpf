@@ -39,5 +39,6 @@ try{
     print_r("500");
 }
 
-print_r("done");
-print_r(Input::$command );
+$fp = fopen("Command.log","wb");
+fwrite($fp,Input::$command);
+fclose($fp);
