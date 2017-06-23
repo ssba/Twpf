@@ -13,7 +13,7 @@ use TelegramBot\Api\InvalidJsonException as InvalidJsonException;
 
 $REQUEST_URI = explode("/", $_SERVER['REQUEST_URI'] );
 
-
+/*
 try{
 
     if( $REQUEST_URI[1] != SECURITYCODE )
@@ -37,7 +37,7 @@ try{
 }catch (Exception $exception){
     //header('HTTP/1.1 500 Internal Server Error');
     print_r("500");
-}
+} */
 
 print_r("done");
 print_r(Input::$command );
