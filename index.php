@@ -1,6 +1,7 @@
 <?php
 
 define("ROOTDIR", __DIR__);
+define("SECURITYCODE", "11a2978259dccbb5b99f0436fc020069");
 
 require __DIR__.'/vendor/autoload.php';
 
@@ -10,7 +11,12 @@ use Core\Config;
 use Twpf\Command\CommandManager;
 use TelegramBot\Api\InvalidJsonException as InvalidJsonException;
 
+$REQUEST_URI = explode("/", $_SERVER['REQUEST_URI'] );
+
 try{
+
+    if( $REQUEST_URI[1] != SECURITYCODE )
+        throw new Exception();
 
     $botClient = new TelegramBot( Config::get("telegram.bot.token"), 'botanio_token');
     $controller = CommandManager::getExecuter( Input::$command );
@@ -24,5 +30,7 @@ try{
 }catch (TypeError $exception){
     header('HTTP/1.1 500 Internal Server Error');
 }catch (InvalidJsonException $exception){
+    header('HTTP/1.1 500 Internal Server Error');
+}catch (Exception $exception){
     header('HTTP/1.1 500 Internal Server Error');
 }
