@@ -1,0 +1,10 @@
+language: php
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: "AKIAJVHUBL33JP3YP7FA"
+  secret_access_key:
+    secure: "j/asGMybmv/XEtxm8o23VQTlxkFLtRy5akAd9ne1dZUJL5b6e6DlGmVe+XVrOJqH6z0aAep7ANRIFx//wR/nICMUkfB/UIoJqFbzZZo5XyF0GebqI6ePrbi8uix9Eh1yz2mndshuLB92gUsOxUyyIZskcNTmX9zviXmWUK294WBwHZ3VQLQvXkDHHVUjfsBK5B0Q2xQydrE0rpSWdSii4/ZvBnXOecNMfg6odTYnIwTb3xsgk0/3xIYDcIchNxNUKoE6r9+3tzWxnyW0sU9YxS3wrK/stk9xCbHyZ21ydFfrTxOkT8Sv1ZF+bEmztcYYgFXbKG20G6QpsBYqtEvxfXV8abT9m386sOFy1nTydFU6zPloRHGUhTgkNRNI6KjU+AsqLYQy6Z7iPwcazeUdumGkCZ7/9lYWTyz3m9aYOquHDWfjVADyidvHQnwOCUqPR6c12CUFbbpD9z+sXpDcM0s61AsQ3SKE281XwU+svHNN5mjAhJMNpoB4m/ZoAKsAnstKTA4Ob4BRqyMSH/irdHUWEjJoSgk7IhgMuZEGCmfzLCVreuPiVuJ3Lu+DJ9d8k0/PhxlsyfO+OIOhIksSTZ1rnxw0BpWEjP+KbyM2cCcusQUAV1HXlykBjN4EXhjfG99xZMu88r6MtBIXQCRKGj3ZSbY0MogGoSOujLw6vWo="
+  region: "us-east-2"
+  app: "NeZnaykaBotApp"
+  env: "Custom-env"
+  bucket_name: "elasticbeanstalk-us-east-2-206268609494"
