@@ -13,7 +13,7 @@ use TelegramBot\Api\InvalidJsonException as InvalidJsonException;
 
 $REQUEST_URI = explode("/", $_SERVER['REQUEST_URI'] );
 
-die (print_r(Config::get("telegram.bot.token")));
+
 try{
 
     if( $REQUEST_URI[1] != SECURITYCODE )
@@ -23,7 +23,7 @@ try{
     $controller = CommandManager::getExecuter( Input::$command );
     $message = Input::getRawMessage();
 
-    $botClient->run();
+    //$botClient->run();
     $botClient->command( Input::$command , function ( $message ) use ($botClient, $message, $controller) {
         $botClient->sendMessage($message->getChat()->getId(), $controller());
     });
