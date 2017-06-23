@@ -23,7 +23,7 @@ try{
     $controller = CommandManager::getExecuter( Input::$command );
     $message = Input::getRawMessage();
 
-    //$botClient->run();
+    $botClient->run();
     $botClient->command( Input::$command , function ( $message ) use ($botClient, $message, $controller) {
         $botClient->sendMessage($message->getChat()->getId(), $controller());
     });
