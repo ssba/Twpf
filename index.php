@@ -13,13 +13,13 @@ use TelegramBot\Api\InvalidJsonException as InvalidJsonException;
 
 $REQUEST_URI = explode("/", $_SERVER['REQUEST_URI'] );
 
-/*
+die (print_r(Config::get("telegram.bot.token")));
 try{
 
     if( $REQUEST_URI[1] != SECURITYCODE )
         throw new Exception();
 
-    $botClient = new TelegramBot( Config::get("telegram.bot.token"), 'botanio_token');
+    $botClient = new TelegramBot( Config::get("telegram.bot.token"));
     $controller = CommandManager::getExecuter( Input::$command );
     $message = Input::getRawMessage();
 
@@ -37,7 +37,7 @@ try{
 }catch (Exception $exception){
     //header('HTTP/1.1 500 Internal Server Error');
     print_r("500");
-} */
+}
 
 print_r("done");
 print_r(Input::$command );
