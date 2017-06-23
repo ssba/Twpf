@@ -29,12 +29,12 @@ try{
     });
 
 }catch (TypeError $exception){
-    header('HTTP/1.1 404 Not Found');
+    //header('HTTP/1.1 404 Not Found');
     print_r("404");
 }catch (InvalidJsonException $exception){
-    header('HTTP/1.1 404 Not Found');
+    //header('HTTP/1.1 404 Not Found');
     print_r("404");
 }catch (Exception $exception){
-    header('HTTP/1.1 500 Internal Server Error');
+    //header('HTTP/1.1 500 Internal Server Error');
     print_r("500");
 }
