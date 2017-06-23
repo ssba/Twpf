@@ -13,7 +13,6 @@ use TelegramBot\Api\InvalidJsonException as InvalidJsonException;
 
 $REQUEST_URI = explode("/", $_SERVER['REQUEST_URI'] );
 
-die(print_r("qwerty"));
 
 try{
 
@@ -31,8 +30,11 @@ try{
 
 }catch (TypeError $exception){
     header('HTTP/1.1 404 Not Found');
+    print_r("404");
 }catch (InvalidJsonException $exception){
     header('HTTP/1.1 404 Not Found');
+    print_r("404");
 }catch (Exception $exception){
     header('HTTP/1.1 500 Internal Server Error');
+    print_r("500");
 }
