@@ -13,7 +13,6 @@ use TelegramBot\Api\InvalidJsonException as InvalidJsonException;
 
 $REQUEST_URI = explode("/", $_SERVER['REQUEST_URI'] );
 
-
 try{
 
     if( $REQUEST_URI[1] != SECURITYCODE )
