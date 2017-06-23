@@ -28,9 +28,9 @@ try{
     });
 
 }catch (TypeError $exception){
-    header('HTTP/1.1 500 Internal Server Error');
+    header('HTTP/1.1 404 Not Found');
 }catch (InvalidJsonException $exception){
-    header('HTTP/1.1 500 Internal Server Error');
+    header('HTTP/1.1 404 Not Found');
 }catch (Exception $exception){
     header('HTTP/1.1 500 Internal Server Error');
 }
