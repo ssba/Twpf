@@ -15,7 +15,8 @@
         "morris/lessql": "~0.3",
         "symfony/finder": "^3.3",
         "symfony/console": "^3.3",
-        "hassankhan/config": "^0.10.0"
+        "hassankhan/config": "^0.10.0",
+        "telegram-bot/api": "^2.3"
     },
     "autoload": {
         "psr-4": {
