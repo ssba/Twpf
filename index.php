@@ -38,3 +38,6 @@ try{
     //header('HTTP/1.1 500 Internal Server Error');
     print_r("500");
 }
+
+print_r("done");
+print_r(Input::$command );
