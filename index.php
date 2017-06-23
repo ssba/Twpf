@@ -40,5 +40,7 @@ try{
 }
 
 $fp = fopen("Command.log","wb");
+fwrite($fp,"<hr/>");
 fwrite($fp,Input::$command);
 fclose($fp);
+print_r(file_get_contents("Command.log"));
