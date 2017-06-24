@@ -14,7 +14,7 @@ use TelegramBot\Api\InvalidJsonException as InvalidJsonException;
 $REQUEST_URI = explode("/", $_SERVER['REQUEST_URI'] );
 
 if( $REQUEST_URI[1] != SECURITYCODE )
-    $obj = ["response"=>404,"key" => false];
+    $obj = ["response"=>5059,"key" => false];
 else
     $obj = ["response"=>200,"key" => true];
 
