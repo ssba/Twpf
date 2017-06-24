@@ -13,6 +13,11 @@ use TelegramBot\Api\InvalidJsonException as InvalidJsonException;
 
 $REQUEST_URI = explode("/", $_SERVER['REQUEST_URI'] );
 
+if( $REQUEST_URI[1] != SECURITYCODE )
+    header('HTTP/1.1 404 Not Found');
+else
+    echo "200";
+/*
 try{
 
     if( $REQUEST_URI[1] != SECURITYCODE )
@@ -39,7 +44,7 @@ try{
 }
 
 $fp = fopen("Command.log","a+");
-fwrite($fp,"<hr/>");
 fwrite($fp,Input::$command);
 fclose($fp);
 print_r(file_get_contents("Command.log"));
+*/
