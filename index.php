@@ -16,7 +16,8 @@ $REQUEST_URI = explode("/", $_SERVER['REQUEST_URI'] );
 if( $REQUEST_URI[1] != SECURITYCODE )
     header('HTTP/1.1 404 Not Found');
 else
-    echo "200";
+    echo json_encode(["response"=>200],
+        JSON_NUMERIC_CHECK | JSON_BIGINT_AS_STRING | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 /*
 try{
 
